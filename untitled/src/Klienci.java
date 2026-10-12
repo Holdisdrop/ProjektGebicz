@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Klienci extends Osoba {
     Integer days;
-    Klienci(String name, String surname, int age,Integer document,Integer days) {
-        super(name, surname, age,document);
+    Klienci(String name, String surname, int age,String document,Integer days) {
+        super(name, surname, age, document);
         this.days=days;
     }
 

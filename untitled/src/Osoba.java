@@ -3,9 +3,9 @@ public class Osoba {
     String name;
     String surname;
     int age;
-    int document;
+    String document;
 
-    Osoba(String name, String surname, int age, int document) {
+    Osoba(String name, String surname, int age, String document) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -24,7 +24,7 @@ public class Osoba {
         Integer wiek = scan.nextInt();
         age = wiek;
         System.out.println("Wprowadź pesel");
-        Integer pesel = scan.nextInt();
+        String pesel = scan.nextLine();
         document = pesel;
 
         System.out.println("Imie:" + name + " Nazwisko:" + surname + " Wiek:" + age + " Pesel:" + document);
@@ -35,4 +35,4 @@ public class Osoba {
 //        void Pokaz(){
 //            Dane();
 //        }
-}
+
