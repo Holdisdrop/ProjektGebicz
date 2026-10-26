@@ -1,0 +1,87 @@
+Opis projektu – System zarządzania siłownią
+1. Cel projektu
+Celem projektu jest stworzenie systemu obsługującego siłownię, który umożliwia
+przechowywanie danych osobowych klientów, trenerów oraz pracowników, a także
+zarządzanie treningami, abonamentami i wynagrodzeniami. Program został napisany
+w języku Java z wykorzystaniem programowania obiektowego.
+2. Struktura projektu
+Projekt składa się z kilku klas, które odpowiadają za poszczególne elementy
+działania systemu.
+Klasa &quot;Osoba&quot;
+Jest klasą bazową, która przechowuje podstawowe informacje o osobie:
+- imię,
+- nazwisko,
+- wiek,
+- numer dokumentu.
+Klasa posiada konstruktor przypisujący wartości do odpowiednich pól oraz metodę
+&quot;Login()&quot;, która umożliwia wprowadzenie danych osobowych z klawiatury i
+wyświetlenie ich w konsoli.
+Klasa &quot;Klienci&quot;
+Dziedziczy po klasie &quot;Osoba&quot; i rozszerza ją o informację dotyczącą liczby dni
+abonamentu. Metoda &quot;BuyAbonament()&quot; umożliwia użytkownikowi wybór długości
+abonamentu spośród 30, 90, 180 i 365 dni. Program sprawdza poprawność
+wybranego okresu i wyświetla informację o cenie abonamentu.
+Klasa &quot;Trener&quot;
+Dziedziczy po klasie &quot;Osoba&quot; i odpowiada za planowanie oraz rozliczanie treningów.
+Zawiera pola przechowujące liczbę treningów personalnych i grupowych oraz ceny
+poszczególnych zajęć. Metoda &quot;Add_trainings()&quot; umożliwia wprowadzenie liczby
+treningów, &quot;Planned_trainings()&quot; wyświetla ich zaplanowaną liczbę, a &quot;Payment()&quot;
+oblicza i wyświetla kwotę przeznaczoną na bieżące rozliczenie.
+Klasa &quot;Pracownicy&quot;
+Dziedziczy po klasie &quot;Osoba&quot; i przechowuje dodatkowe informacje dotyczące
+stanowiska, wynagrodzenia oraz liczby przepracowanych godzin. Metoda
+&quot;PlanOnTheWeek()&quot; umożliwia ustalenie liczby godzin pracy w miesiącu i obliczenie
+wynagrodzenia na podstawie stanowiska pracownika.
+W programie uwzględniono trzy stanowiska:
+
+- sprzątacz lub sprzątaczka – 45 zł za godzinę,
+- sekretariat – 60 zł za godzinę,
+- elektryk – 70 zł za godzinę.
+Program sprawdza, czy liczba godzin mieści się w przedziale od 1 do 184. W
+przypadku podania nieprawidłowej wartości wyświetla komunikat i umożliwia
+ponowne wprowadzenie danych.
+Klasa &quot;bzd&quot;
+Zawiera tablice przechowujące przykładowe numery identyfikacyjne trenerów,
+klientów i pracowników. Każda tablica ma pięć elementów, które są inicjalizowane w
+konstruktorze klasy.
+3. Zastosowane technologie i rozwiązania
+W projekcie wykorzystano:
+- język programowania Java,
+- programowanie obiektowe,
+- dziedziczenie klas,
+- konstruktory,
+- pola i metody,
+- tablice do przechowywania danych,
+- klasę &quot;Scanner&quot; do pobierania danych od użytkownika,
+- instrukcje warunkowe &quot;if&quot;, &quot;else if&quot;,
+- pętle &quot;while&quot; do kontroli poprawności wprowadzanych danych.
+4. Sposób działania programu
+Program został podzielony na klasy, dzięki czemu poszczególne funkcje systemu są
+od siebie oddzielone. Klasa &quot;Osoba&quot; stanowi podstawę dla klas &quot;Klienci&quot;, &quot;Trener&quot; i
+&quot;Pracownicy&quot;. Dzięki dziedziczeniu klasy pochodne mogą korzystać z danych oraz
+funkcjonalności klasy bazowej, a jednocześnie posiadają własne pola i metody.
+Użytkownik może wprowadzać dane za pomocą konsoli. W zależności od wybranej
+funkcji program umożliwia obsługę abonamentów, planowanie treningów, obliczanie
+płatności oraz wyznaczanie wynagrodzenia pracowników.
+5. Bezpieczeństwo i poprawność danych
+W projekcie zastosowano mechanizmy sprawdzania poprawności danych
+wprowadzanych przez użytkownika. Przykładem jest kontrola liczby dni abonamentu
+w klasie &quot;Klienci&quot; oraz liczby godzin pracy w klasie &quot;Pracownicy&quot;. Jeśli użytkownik
+poda wartość niezgodną z przyjętymi założeniami, program wyświetla odpowiedni
+komunikat i umożliwia ponowne wprowadzenie danych.
+Takie rozwiązanie ogranicza ryzyko wystąpienia błędów podczas działania programu.
+Kontrola danych jest ważnym elementem systemu, ponieważ pozwala zachować
+
+spójność informacji i zapewnia prawidłowe wykonywanie obliczeń związanych z
+abonamentami, treningami oraz wynagrodzeniami.
+
+6. Podsumowanie
+Projekt przedstawia podstawowy system informatyczny wspomagający
+funkcjonowanie siłowni. Jego głównym założeniem jest uporządkowanie informacji o
+osobach związanych z obiektem oraz automatyzacja wybranych obliczeń. Projekt
+pozwala wykorzystać w praktyce podstawowe zagadnienia programowania w języku
+Java, szczególnie klasy, obiekty, konstruktory, dziedziczenie, instrukcje warunkowe i
+pobieranie danych od użytkownika.
+System może być w przyszłości rozwijany o zapisywanie danych w bazie danych,
+automatyczne przypisywanie identyfikatorów, bardziej rozbudowany grafik treningów
+oraz pełny system rozliczeń.
