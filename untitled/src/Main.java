@@ -39,8 +39,10 @@ public class Main {
         if (!znaleziono) {
             for (int i = 0; i < baza.PracownikPesel.length; i++) {
                 if (pesel.equals(baza.PracownikPesel[i])) {
+                    Pracownicy p = new Pracownicy(0,0,"","",0,"");
                     System.out.println("Zalogowano jako Pracownik");
                     System.out.println("Witaj w systemie pracowniczym");
+                    p.PlanOnTheWeek();
                     znaleziono = true;
                 }
             }
@@ -49,6 +51,8 @@ public class Main {
         if (!znaleziono) {
             System.out.println("Blad logowania nie znaleziono PESELU w bazie");
         }
+
+
 
     }
 }
